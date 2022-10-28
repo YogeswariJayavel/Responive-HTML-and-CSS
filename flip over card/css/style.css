@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #01E37F;
+}
+
+.container{
+    width:650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:100px auto;
+}
+
+.card{
+    width:800px;
+    min-height: 580px;
+    position: relative;
+    user-select: none;
+}
+
+.card-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card-content:active{
+    transform: rotateY(180deg);
+}
+
+.front{
+    position: relative;
+}
+
+.front, .back{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.left-box{
+    width:340px;
+    height:500px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left:-70px;
+    top:40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.apple-card{
+    width:340px;
+    height: 390px;
+    position: relative;
+}
+
+.apple-card .left, .apple-card .right {
+    position: absolute;
+    color:white;
+    font-size: 30px;
+    top:20px;
+}
+
+.apple-card .right{
+    right: 20px;
+}
+
+.apple-card img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bottom-box{
+    width:340px;
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+}
+
+.bottom-box img{
+    width: 20%;
+    height: 100%;
+    border:solid 1px green;
+    padding:2px;
+    border-radius: 2px;
+}
+
+.content{
+    position: absolute;
+    left:300px;
+    top:50px;
+}
+
+.content h3{
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.content .cod{
+    color:rgba(51, 51, 51, 0.604);
+    font-size: 15px;
+}
+
+.content .cost{
+    color: red;
+    margin:30px 0;
+}
+
+.content .cost  span{
+    font-size: 55px;
+    padding-left: 10px;
+}
+
+.content .color{
+    text-transform: uppercase;
+    color:rgba(51, 51, 51, 0.604);
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 20px 0 10px 0;
+}
+
+.content .box{
+    width:200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content .box img{
+    width: 20%;
+    height: 50px;
+}
+
+.content .box .apple{
+    border:solid 1px green; 
+    padding:2px;
+    border-radius: 2px;
+}
+
+.content ul li{
+    list-style-position:inside;
+    line-height: 24px;
+}
+
+.content button{
+    margin-top:30px;
+    padding:15px 40px;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF3F40;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.back .header{
+    background-color: #F8ECD2;
+    padding:30px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.back ul{
+    margin:20px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.back ul li{
+    list-style-position: inside;
+    font-size: 25px;
+    line-height: 25px;
+    border:solid 2px #F8ECD2;
+    margin:5px 0;
+    padding:5px;
+    border-radius: 2px;
+}
+
+@media (max-width:800px){
+    .container{
+        width:650px;
+        min-height: 650px;
+    }
+
+    .card{
+        min-height: 1150px;
+    }
+    .left-box{
+      position: absolute;
+      left:150px;
+    }
+
+    .content{
+        position: absolute;
+        top:600px;
+        left:150px;
+    }
+    
+    .content .cod{
+        color:rgba(51, 51, 51, 0.604);
+        font-size: 20px;
+    }
+    
+    .content .color{
+        font-size: 18px;
+    }
+    
+    .content ul li{
+        list-style-position:inside;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    
+    .content button{
+        font-size: 20px;
+    }
+}
